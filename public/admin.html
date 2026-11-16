@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin Panel — Πρόγραμμα Βαρδιών</title>
+  <link rel="icon" href="/favicon.ico">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">Πρόγραμμα Βαρδιών · Admin</div>
+    <nav>
+      <a href="/">Agents</a>
+      <a href="/period.html">Περίοδος</a>
+      <a href="/import.html">Έλεγχος Excel</a>
+      <a href="/schedule.html">Πρόγραμμα</a>
+      <a href="/admin.html" class="active admin-link">Admin</a>
+    </nav>
+    <div class="user">
+      <span id="userName"></span>
+      <button class="btn small" id="logoutBtn">Αποσύνδεση</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="admin-tabs">
+      <button data-tab="dashboard" class="active">Dashboard</button>
+      <button data-tab="reports">Αναφορές Προβλημάτων</button>
+      <button data-tab="history">Ιστορικό Αναφορών</button>
+      <button data-tab="settings">Ρυθμίσεις Admin</button>
+      <button data-tab="notifications">Ειδοποιήσεις<span class="notif-badge zero" id="notifBadge">0</span></button>
+    </div>
+
+    <!-- ---------- Dashboard ---------- -->
+    <section id="tab-dashboard">
+      <div class="stat-cards">
+        <div class="stat-card total">
+          <div class="stat-label">Συνολικές αναφορές</div>
+          <div class="stat-value" id="stTotal">—</div>
+        </div>
+        <div class="stat-card new">
+          <div class="stat-label">Νέες αναφορές</div>
+          <div class="stat-value" id="stNew">—</div>
+        </div>
+        <div class="stat-card review">
+          <div class="stat-label">Υπό εξέταση</div>
+          <div class="stat-value" id="stReview">—</div>
+        </div>
+        <div class="stat-card resolved">
+          <div class="stat-label">Επιλυμένες</div>
+          <div class="stat-value" id="stResolved">—</div>
+        </div>
+        <div class="stat-card rejected">
+          <div class="stat-label">Απορριφθείσες</div>
+          <div class="stat-value" id="stRejected">—</div>
+        </div>
+      </div>
+      <h3 style="font-size:1rem;color:#56607a;margin:.2rem 0 .7rem">Πρόσφατες νέες αναφορές</h3>
+      <div id="recentWrap"></div>
+    </section>
+
+    <!-- ---------- Αναφορές ---------- -->
+    <section id="tab-reports" hidden>
+      <div class="toolbar">
+        <input type="text" id="fQ" placeholder="Αναζήτηση σε περιγραφή/όνομα…" style="width:260px">
+        <select id="fStatus">
+          <option value="">Όλες οι καταστάσεις</option>
+          <option value="NEW">Νέες</option>
+          <option value="IN_REVIEW">Υπό εξέταση</option>
+          <option value="RESOLVED">Επιλυμένες</option>
+          <option value="REJECTED">Απορριφθείσες</option>
+        </select>
+        <select id="fCategory">
+          <option value="">Όλες οι κατηγορίες</option>
+        </select>
+        <select id="fUser">
+          <option value="">Όλοι οι εργαζόμενοι</option>
+        </select>
+        <label class="field" style="flex-direction:row;align-items:center;gap:.4rem">
+          <span>Από</span><input type="date" id="fFrom">
+        </label>
+        <label class="field" style="flex-direction:row;align-items:center;gap:.4rem">
+          <span>Έως</span><input type="date" id="fTo">
+        </label>
+        <button class="btn" id="fClear">Καθαρισμός</button>
+        <span class="spacer"></span>
+        <span class="muted" id="listCount"></span>
+      </div>
+      <div id="reportsWrap"></div>
+    </section>
+
+    <!-- ---------- Ιστορικό ---------- -->
+    <section id="tab-history" hidden>
+      <p class="muted" style="margin-top:0">Κλεισμένες αναφορές — επιλυμένες και απορριφθείσες.</p>
+      <div id="historyWrap"></div>
+    </section>
+
+    <!-- ---------- Ρυθμίσεις ---------- -->
+    <section id="tab-settings" hidden>
+      <div class="stat-card" style="border-left-color:#2f5496;max-width:720px">
+        <div class="stat-label">Ρυθμίσεις Admin</div>
+        <div id="settingsBody" style="margin-top:.8rem;font-size:.92rem;line-height:1.7"></div>
+      </div>
+    </section>
+
+    <!-- ---------- Ειδοποιήσεις ---------- -->
+    <section id="tab-notifications" hidden>
+      <div class="toolbar">
+        <button class="btn" id="markAllRead">Σήμανση όλων ως αναγνωσμένων</button>
+        <span class="spacer"></span>
+        <span class="muted" id="notifCount"></span>
+      </div>
+      <div class="notif-list" id="notifWrap"></div>
+    </section>
+  </main>
+
+  <div id="toast"></div>
+  <script src="/js/admin.js"></script>
+</body>
+</html>

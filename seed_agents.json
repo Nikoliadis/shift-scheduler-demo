@@ -1,0 +1,726 @@
+{
+  "_σημείωση": "Δοκιμαστικά (φανταστικά) δεδομένα agents για import στη βάση. Ημέρες: 1=Δευτέρα ... 7=Κυριακή. Το πεδίο constraints περνάει στον πίνακα agent_constraints.",
+  "companies": [
+    "NOVA",
+    "ORION"
+  ],
+  "departments": [
+    "call",
+    "verification",
+    "supervisor"
+  ],
+  "skills": [
+    "ATLAS",
+    "ΑΡΓΩ",
+    "VEGA",
+    "INTERNATIONAL",
+    "ΛΟΙΠΑ",
+    "ΖΕΦΥΡΟΣ",
+    "ΑΙΓΑΙΟΥ"
+  ],
+  "shift_eligibility_19_03": [
+    {
+      "agent": "ΔΗΜΟΠΟΥΛΟΣ ΖΗΣΗΣ",
+      "max_per_week": 1,
+      "location": "office"
+    },
+    {
+      "agent": "ΘΕΟΔΩΡΟΥ ΗΛΙΑΣ",
+      "max_per_week": 1,
+      "location": "office"
+    },
+    {
+      "agent": "ΙΩΑΝΝΙΔΗΣ ΘΑΝΑΣΗΣ",
+      "max_per_week": 1,
+      "location": "office"
+    },
+    {
+      "agent": "ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ ΑΝΔΡΕΑΣ",
+      "max_per_week": 2,
+      "location": "home"
+    },
+    {
+      "agent": "ΜΑΝΩΛΑΚΗ ΛΙΝΑ",
+      "max_per_week": 2,
+      "location": "office",
+      "σημείωση": "Ο περιορισμός «όχι μόνη στο γραφείο» ΚΑΤΑΡΓΗΘΗΚΕ (14/11/2026) — καλύπτει κανονικά τη βραδινή Vega Bank."
+    },
+    {
+      "agent": "ΣΑΒΒΙΔΟΥ ΠΗΝΕΛΟΠΗ",
+      "max_per_week": 1,
+      "location": "office",
+      "σημείωση": "Προστέθηκε στη λίστα της βραδινής Vega Bank 23:00-07:00 (14/11/2026) με όριο 1/εβδομάδα. Η λίστα Κ9 υπερισχύει των ατομικών ορίων ωραρίου της (end_by 22:00) και του can_night=false."
+    }
+  ],
+  "agents": [
+    {
+      "full_name": "ΑΝΤΩΝΙΟΥ ΜΑΝΩΛΑΚΗ",
+      "company": "NOVA",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "VEGA",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "Εναλλαγή βάρδιας κάθε εβδομάδα (μία εβδομάδα πρωί, μία απόγευμα) λόγω 2ης εργασίας."
+    },
+    {
+      "full_name": "ΒΑΣΙΛΑΚΗ ΒΑΣΙΛΙΚΗ",
+      "company": "NOVA",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΠΑΠΑΔΟΠΟΥΛΟΣ ΑΝΔΡΕΑΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΓΡΗΓΟΡΙΟΥ ΓΕΩΡΓΙΑ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ΑΡΓΩ",
+        "VEGA",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "Μόνο πρωινή βάρδια. Εξυπηρετεί ΑΡΓΩ τις καθημερινές."
+    },
+    {
+      "full_name": "ΔΗΜΑΚΗ ΓΙΩΤΑ",
+      "company": "NOVA",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": true,
+      "constraints": "Δεν επιθυμεί νυχτερινή (23:00-07:00) — ΜΟΝΟ αν είναι ανάγκη (soft αποφυγή, τελευταία επιλογή)."
+    },
+    {
+      "full_name": "ΓΕΩΡΓΙΟΥ ΒΑΓΓΕΛΗΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": false,
+      "constraints": "ΜΟΝΟ πρωινή βάρδια, όλες τις μέρες (hard). Λόγω σχολής: κάθε Δευτέρα και Παρασκευή έχει ΡΕΠΟ ή εργάζεται ΤΗΛΕΡΓΑΣΙΑ 06:00-14:00. Soft: Παρασκευή 06:00-14:00 Αιγαίου μαζί με Γεωργιου Ρενα αν βγαίνει το πρόγραμμα, αλλιώς ρεπό ο ένας από τους δύο. Soft: κατά προτίμηση ίδια ώρα έναρξης με Γεωργιου Ρενα, γιατί έρχονται μαζί στη δουλειά."
+    },
+    {
+      "full_name": "ΕΜΜΑΝΟΥΗΛ ΧΡΥΣΑ",
+      "company": "NOVA",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": true,
+      "constraints": "Προτιμά απογευματινή βάρδια λόγω 2ης εργασίας. Κάνει κανονικά και νυχτερινή 23:00-07:00."
+    },
+    {
+      "full_name": "ΚΩΝΣΤΑΝΤΙΝΙΔΗΣ ΑΝΔΡΕΑΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "VEGA",
+        "INTERNATIONAL",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "2 ημέρες τηλεργασία + 3 ημέρες γραφείο την εβδομάδα. Όταν κάνει απογευματινή διά ζώσης: 15:30-23:30 και International."
+    },
+    {
+      "full_name": "ΑΛΕΞΙΟΥ ΔΙΟΝΥΣΗΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ΑΡΓΩ",
+        "VEGA",
+        "INTERNATIONAL",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "Εξυπηρετεί και ΑΡΓΩ και International."
+    },
+    {
+      "full_name": "ΖΕΡΒΑ ΖΩΗ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": false,
+      "fixed_shift": "16:00-24:00",
+      "fixed_days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "constraints": "Καθημερινές σταθερά 16:00-24:00 λόγω σχολής."
+    },
+    {
+      "full_name": "ΘΕΟΧΑΡΗ ΗΡΩ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": false,
+      "constraints": "Πρωινή ή απογευματινή. Απογευματινή το αργότερο έως 23:30. Ενημερώνει αν προκύψει θέμα με τη σχολή της."
+    },
+    {
+      "full_name": "ΚΑΛΟΓΕΡΟΠΟΥΛΟΥ ΘΕΟΔΩΡΑ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS",
+        "ΑΡΓΩ",
+        "ΖΕΦΥΡΟΣ"
+      ],
+      "can_night": false,
+      "constraints": "Απογευματινή από γραφείο ΜΟΝΟ ωράριο 14:00-22:00. Κυρίως ΖΕΦΥΡΟΣ — Atlas ΜΟΝΟ σε απόλυτη ανάγκη (soft αποφυγή)."
+    },
+    {
+      "full_name": "ΚΥΡΙΑΚΟΥ ΙΡΙΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ΑΡΓΩ",
+        "VEGA",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "Εξυπηρετεί και ΑΡΓΩ."
+    },
+    {
+      "full_name": "ΛΑΖΑΡΙΔΟΥ ΔΑΝΑΗ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ATLAS",
+        "ΑΡΓΩ"
+      ],
+      "can_night": false,
+      "constraints": "Προτιμά πρωινή βάρδια (λόγω equites). Δεν κάνει αγγλικά calls."
+    },
+    {
+      "full_name": "ΜΑΝΩΛΑΚΗ ΛΙΝΑ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ΑΡΓΩ",
+        "VEGA",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "Εξυπηρετεί και ΑΡΓΩ. Στη βάρδια 19:00-03:00 δεν πρέπει να είναι μόνη στο γραφείο."
+    },
+    {
+      "full_name": "ΝΤΟΚΟΥ ΙΡΙΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "VEGA",
+        "INTERNATIONAL",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "ΜΟΝΟ απογευματινή βάρδια 15:30-23:30 ή 16:00-24:00 λόγω 2ης εργασίας (συν έως 2 φορές/εβδομάδα τη 19:00-03:00)."
+    },
+    {
+      "full_name": "ΒΑΣΙΛΕΙΟΥ ΚΩΣΤΑΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "VEGA",
+        "INTERNATIONAL",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "Εξυπηρετεί και International."
+    },
+    {
+      "full_name": "ΠΑΠΑΝΙΚΟΛΑΟΥ ΝΑΤΑΣΑ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ΑΡΓΩ",
+        "VEGA"
+      ],
+      "can_night": false,
+      "fixed_shift": "09:00-17:00",
+      "fixed_days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "constraints": "ΜΟΝΟ καθημερινές 09:00-17:00 και πάντα από γραφείο. Αν εργαστεί τηλεργασία μπορεί και άλλη βάρδια — κυρίως όμως 09:00-17:00."
+    },
+    {
+      "full_name": "ΡΟΥΣΣΟΥ ΟΛΓΑ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "VEGA"
+      ],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΔΗΜΟΠΟΥΛΟΣ ΖΗΣΗΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "VEGA",
+        "INTERNATIONAL",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "International."
+    },
+    {
+      "full_name": "ΘΕΟΔΩΡΟΥ ΗΛΙΑΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ΑΡΓΩ",
+        "VEGA",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "Πρωινή και απογευματινή — προτιμά απογευματινή έως 23:30. Αν μπαίνει πρωί, από 09:00 και μετά. Εξυπηρετεί και ΑΡΓΩ."
+    },
+    {
+      "full_name": "ΣΑΒΒΙΔΟΥ ΠΗΝΕΛΟΠΗ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "ΑΡΓΩ",
+        "VEGA",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "Απόγευμα έως 22:00. Πρωί από 09:00 κυρίως (μπορεί και 08:00). Εξυπηρετεί και ΑΡΓΩ."
+    },
+    {
+      "full_name": "ΙΩΑΝΝΙΔΗΣ ΘΑΝΑΣΗΣ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "VEGA",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΤΡΙΑΝΤΑΦΥΛΛΟΥ ΡΕΝΑ",
+      "company": "ORION",
+      "departments": [
+        "call"
+      ],
+      "skills": [
+        "VEGA",
+        "INTERNATIONAL",
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": false,
+      "constraints": "ΜΟΝΟ πρωινή βάρδια, όλες τις μέρες (hard). Λόγω σχολής: κάθε Τρίτη και Παρασκευή έχει ΡΕΠΟ ή εργάζεται ΤΗΛΕΡΓΑΣΙΑ 06:00-14:00. Τις υπόλοιπες μέρες η πρωινή με έναρξη 07:30 ή 08:00. Soft: κατά προτίμηση ίδια ώρα έναρξης με τον Γεωργιου Νίκο, γιατί έρχονται μαζί στη δουλειά."
+    },
+    {
+      "full_name": "ΚΑΡΑΛΗΣ ΙΑΣΟΝΑΣ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": null,
+      "constraints": "Σε εκπαίδευση για Atlas call."
+    },
+    {
+      "full_name": "ΦΡΑΓΚΟΥ ΓΕΩΡΓΙΑ",
+      "company": "NOVA",
+      "departments": [
+        "supervisor"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": false,
+      "fixed_days_off": [
+        1,
+        2
+      ],
+      "weekend_shift": "16:00-24:00",
+      "constraints": "Σταθερά ρεπό Δευτέρα + Τρίτη. Σαββατοκύριακα δουλεύει 16:00-24:00."
+    },
+    {
+      "full_name": "ΧΡΙΣΤΟΔΟΥΛΟΥ ΤΑΣΙΑ",
+      "company": "NOVA",
+      "departments": [
+        "supervisor"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": false,
+      "constraints": "Προτιμάει συνεχόμενα ρεπό (soft προτίμηση με αυξημένη προτεραιότητα)."
+    },
+    {
+      "full_name": "ΛΑΜΠΡΟΥ ΚΩΣΤΑΣ",
+      "company": "ORION",
+      "departments": [
+        "supervisor"
+      ],
+      "skills": [
+        "ATLAS",
+        "ΑΡΓΩ"
+      ],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΛΑΜΠΡΟΥ ΦΑΝΗ",
+      "company": "ORION",
+      "departments": [
+        "supervisor"
+      ],
+      "skills": [
+        "VEGA"
+      ],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΑΡΓΥΡΟΥ ΧΡΥΣΑ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ATLAS"
+      ],
+      "can_night": false,
+      "fixed_shift": "08:00-16:00",
+      "fixed_days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "constraints": "Σταθερό ωράριο καθημερινές 08:00-16:00."
+    },
+    {
+      "full_name": "ΜΙΧΑΗΛΙΔΗΣ ΠΕΤΡΟΣ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ATLAS",
+        "ΖΕΦΥΡΟΣ"
+      ],
+      "can_night": false,
+      "constraints": "ΖΕΦΥΡΟΣ Δευτέρα έως Παρασκευή."
+    },
+    {
+      "full_name": "ΒΕΡΓΟΥ ΑΝΝΑ",
+      "company": "NOVA",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ATLAS",
+        "ΑΙΓΑΙΟΥ"
+      ],
+      "can_night": false,
+      "constraints": "Αιγαίου."
+    },
+    {
+      "full_name": "ΓΑΛΑΝΗ ΒΑΛΙΑ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΔΕΛΗ ΘΕΟΧΑΡΗ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ΖΕΦΥΡΟΣ"
+      ],
+      "can_night": false,
+      "constraints": "Δευτέρα έως Παρασκευή ΖΕΦΥΡΟΣ."
+    },
+    {
+      "full_name": "ΚΟΝΤΟΥ ΖΩΗ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΙΑΣΟΝΑΣ ΜΑΝΟΛΗΣ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [],
+      "can_night": false,
+      "constraints": "Τις καθημερινές: σπαστό ωράριο 09:00-14:00 + 21:00-24:00."
+    },
+    {
+      "full_name": "ΜΠΑΛΤΑ ΕΦΗ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ΖΕΦΥΡΟΣ"
+      ],
+      "can_night": false,
+      "constraints": "Η βάρδιά της ξεκινάει από τις 09:00 και μετά. ΖΕΦΥΡΟΣ Δευτέρα έως Παρασκευή."
+    },
+    {
+      "full_name": "ΠΑΠΑΘΑΝΑΣΙΟΥ ΚΛΕΙΩ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΣΙΔΕΡΗ ΛΗΤΩ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ΑΙΓΑΙΟΥ"
+      ],
+      "can_night": false,
+      "constraints": "Αιγαίου. Εξυπηρετεί και βραδινά έως τη 01:00-02:00 (όχι πλήρη νυχτερινή)."
+    },
+    {
+      "full_name": "ΤΖΑΝΗ ΜΥΡΤΩ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [],
+      "can_night": false,
+      "work_location": "home",
+      "constraints": "Εξ αποστάσεως (τηλεργασία), ΜΟΝΟ πρωινά."
+    },
+    {
+      "full_name": "ΞΕΝΟΣ ΝΕΣΤΟΡΑΣ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ΖΕΦΥΡΟΣ"
+      ],
+      "can_night": false,
+      "fixed_shift": "10:00-18:00",
+      "fixed_days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "constraints": "ΜΟΝΟ καθημερινές, σταθερό ωράριο 10:00-18:00."
+    },
+    {
+      "full_name": "ΦΛΩΡΟΥ ΝΕΦΕΛΗ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ΖΕΦΥΡΟΣ"
+      ],
+      "can_night": false,
+      "fixed_shift": "09:00-17:00",
+      "fixed_days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "constraints": "ΜΟΝΟ καθημερινές, σταθερό ωράριο 09:00-17:00."
+    },
+    {
+      "full_name": "ΧΙΩΤΗ ΣΤΕΛΛΑ",
+      "company": "NOVA",
+      "departments": [
+        "verification"
+      ],
+      "skills": [],
+      "can_night": false,
+      "fixed_shift": "16:00-24:00",
+      "work_location": "home",
+      "constraints": "Εξ αποστάσεως (τηλεργασία), ωράριο 16:00-24:00."
+    },
+    {
+      "full_name": "ΑΛΕΞΑΚΗ ΜΑΝΩΛΑΚΗ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ATLAS",
+        "ΖΕΦΥΡΟΣ"
+      ],
+      "can_night": false,
+      "fixed_shift": "09:00-17:00",
+      "fixed_days": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "constraints": "ΜΟΝΟ καθημερινές, σταθερό ωράριο 09:00-17:00."
+    },
+    {
+      "full_name": "ΟΙΚΟΝΟΜΟΥ ΟΡΕΣΤΗΣ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [],
+      "can_night": true,
+      "fixed_days_off": [
+        3,
+        4
+      ],
+      "constraints": "Σταθερά ρεπό Τετάρτη + Πέμπτη. Τις υπόλοιπες μέρες απογευματινή βάρδια."
+    },
+    {
+      "full_name": "ΒΟΥΛΓΑΡΗ ΒΑΣΙΛΙΚΗ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ATLAS",
+        "ΑΙΓΑΙΟΥ"
+      ],
+      "can_night": false,
+      "work_location": "home",
+      "constraints": "Εξ αποστάσεως (τηλεργασία), ΜΟΝΟ πρωινά."
+    },
+    {
+      "full_name": "ΠΕΤΡΙΔΗΣ ΠΕΤΡΟΣ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [],
+      "can_night": null,
+      "constraints": null
+    },
+    {
+      "full_name": "ΓΙΑΝΝΑΚΟΥ ΓΕΩΡΓΙΑ",
+      "company": "ORION",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ΑΙΓΑΙΟΥ"
+      ],
+      "can_night": false,
+      "constraints": "Κυρίως Αιγαίου. Vega call μετά τις 14:00. Απόγευμα (δεν προτιμάται) το πολύ μέχρι 21:00."
+    },
+    {
+      "full_name": "ΔΟΥΚΑ ΓΙΩΤΑ",
+      "company": "NOVA",
+      "departments": [
+        "verification"
+      ],
+      "skills": [
+        "ΛΟΙΠΑ"
+      ],
+      "can_night": null,
+      "constraints": null
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "name": "programa-vardion",
+  "version": "0.1.0",
+  "description": "Εφαρμογή αυτόματης δημιουργίας προγράμματος βαρδιών call center",
+  "main": "src/server.js",
+  "scripts": {
+    "dev": "nodemon src/server.js",
+    "start": "node src/server.js",
+    "migrate": "node src/db/migrate.js",
+    "seed": "node src/db/seed.js",
+    "setup": "node src/db/migrate.js && node src/db/seed.js",
+    "test:rules": "node scripts/test_rules.js",
+    "test:generator": "node scripts/test_generator.js",
+    "test:excel": "node scripts/test_excel_roundtrip.js",
+    "test:reports": "node scripts/test_reports.js",
+    "test:frontend": "node scripts/test_frontend.js",
+    "test:wishes": "node scripts/test_wishes.js",
+    "test:security": "node scripts/test_security.js",
+    "test": "node scripts/test_rules.js && node scripts/test_excel_roundtrip.js && node scripts/test_reports.js && node scripts/test_frontend.js && node scripts/test_wishes.js && node scripts/test_security.js",
+    "backup": "node scripts/backup_tables.js dump",
+    "migrate:audit": "node scripts/add_audit_log.js"
+  },
+  "license": "UNLICENSED",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "exceljs": "^4.4.0",
+    "express": "^4.21.2",
+    "express-mysql-session": "^3.0.3",
+    "express-rate-limit": "^8.6.0",
+    "express-session": "^1.18.1",
+    "helmet": "^8.3.0",
+    "mysql2": "^3.24.6"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1",
+    "nodemon": "^3.1.9"
+  },
+  "overrides": {
+    "mysql2": "$mysql2"
+  }
+}
