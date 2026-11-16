@@ -12,6 +12,23 @@ and Excel import/export.
 > companies and client projects in this repository are **fictional** — the real
 > data stays private.
 
+
+## Screenshots
+
+<img src="docs/screenshots/schedule.png" alt="Generated weekly roster (colour per role, hourly bands)" width="100%">
+<p align="center"><sub>Generated weekly roster (colour per role, hourly bands)</sub></p>
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/agents.png" alt="Agents with skills, fixed shifts and individual constraints"><p align="center"><sub>Agents with skills, fixed shifts and individual constraints</sub></p></td>
+    <td width="50%"><img src="docs/screenshots/period.png" alt="Period setup: leave, day-off requests and preferred shifts"><p align="center"><sub>Period setup: leave, day-off requests and preferred shifts</sub></p></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/excel-check.png" alt="Excel check: preview what the importer parsed before saving"><p align="center"><sub>Excel check: preview what the importer parsed before saving</sub></p></td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
 ---
 
 ## What it does

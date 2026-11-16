@@ -12,6 +12,23 @@
 > ονόματα εργαζομένων, εταιρειών και έργων σε αυτό το repository είναι **φανταστικά** —
 > τα πραγματικά δεδομένα παραμένουν ιδιωτικά.
 
+
+## Screenshots
+
+<img src="docs/screenshots/schedule.png" alt="Πρόγραμμα εβδομάδας (χρώμα ανά ρόλο, ωριαίες ζώνες)" width="100%">
+<p align="center"><sub>Πρόγραμμα εβδομάδας (χρώμα ανά ρόλο, ωριαίες ζώνες)</sub></p>
+
+<table>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/agents.png" alt="Agents με δεξιότητες, σταθερά ωράρια και ιδιαιτερότητες"><p align="center"><sub>Agents με δεξιότητες, σταθερά ωράρια και ιδιαιτερότητες</sub></p></td>
+    <td width="50%"><img src="docs/screenshots/period.png" alt="Περίοδος: άδειες, αιτήματα ρεπό και επιθυμητές βάρδιες"><p align="center"><sub>Περίοδος: άδειες, αιτήματα ρεπό και επιθυμητές βάρδιες</sub></p></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="docs/screenshots/excel-check.png" alt="Έλεγχος Excel: προεπισκόπηση πριν την αποθήκευση"><p align="center"><sub>Έλεγχος Excel: προεπισκόπηση πριν την αποθήκευση</sub></p></td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
 ---
 
 ## Τι κάνει
